@@ -1,16 +1,34 @@
 //Challenge 03 — Product
-
 var prompt = require('prompt-sync')();
-let totalPriceStock = product.price * product.quantity;
-
 
 let product = {
-   name : "Zinc Complements 50 mg",
-   price : 300 + "DH",
-   category : ["Health", "Sport"],
-   quantity : 20,
-   available : ["In Stock", "Out Stock"]
-}
+   name: "zinc 50 mg",
+   price: Number(prompt('Enter the max prices you want search product : ')),
+   category: "Health",
+   quantity: 100,
+   available: ["Out_Stock", "In_Stock"]
 
-if(product);
-else;
+};
+
+
+let userEnter, pricelsit, totalPriceStock; 
+
+
+userEnter =  prompt('Enter the name of product : ').toLowerCase();
+pricelsit  = product.price;
+totalPriceStock = product.price * product.quantity;
+
+if (0 <= pricelsit) {
+
+  console.log(`- the product available right now : ${product.available[1]} - Rested ${product.quantity} inside the stock`);
+
+   console.log(`- the total price of the stock : ${totalPriceStock} DH`);
+}
+  
+else {
+
+   console.log(`- the product is not available right now :${product.available[0]}
+   - Rested ${product.quantity} out of the stock`);
+      console.log('- the total price of the stock : ' + 0 +" DH" );
+
+}
